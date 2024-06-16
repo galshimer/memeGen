@@ -4,22 +4,23 @@
         min-height: 70px;
     }
 
-    /* .hamburger {
-        display: block;
-    } */
-
     .gallery-container img {
         width: 180px;
     }
-
 }
 
-@media (max-width: 680px) {
+@media(min-width: 540px) {
 
-}
+    .btn-toggle-menu {
+        display: none;
 
-@media (max-width: 750px) {
-    .btn{
-        font-size:10px;
     }
+}
+
+@media(max-width: 750px) {
+    .editor {
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr;
+    }
+
 }

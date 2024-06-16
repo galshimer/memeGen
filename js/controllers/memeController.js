@@ -72,12 +72,16 @@ function onDownloadImg(elLink) {
 function onImgSelect(elImg) {
     const selectedImgId = +elImg.dataset.imgId
     gMeme.selectedImgId = selectedImgId
+
     var elEditor = document.querySelector('.editor')
-    console.log('elEditor: ', elEditor)
     elEditor.classList.remove('none')
+
     var elGallery = document.querySelector('.gallery-container')
-    console.log('elGallery: ', elGallery)
     elGallery.classList.add('none')
+    
+    var elAbout = document.querySelector('.about')
+    elAbout.classList.add('none')
+
     renderMeme()
 }
 
@@ -159,9 +163,19 @@ function onDeleteLine() {
 }
 
 function onChangeView(section) {
+    var elEditor = document.querySelector('.editor')
+    var elGallery = document.querySelector('.gallery-container')
+    var elAbout = document.querySelector('.about')
+
     if (section === 'gallery') {
-        var elEditor = document.querySelector('.editor')
         elEditor.classList.add('none')
+        elGallery.classList.remove('none')
+        elAbout.classList.add('none')
+    }
+    if (section === 'about') {
+        elEditor.classList.add('none')
+        elGallery.classList.add('none')
+        elAbout.classList.remove('none')
     }
 }
 
@@ -200,3 +214,4 @@ function onMouseMove(ev) {
 function onMouseUp() {
     gIsDragging = false
 }
+

@@ -26,42 +26,6 @@
 }
 
 .main-header .main-nav li:last-of-type {
-    border-inline-start: 1px solid RGBA(138, 138, 138, 1);
+    border-inline-start: 1px solid rgba(138, 138, 138, 1);
 }
 
-
-.main-header .btn-toggle-menu {
-    background-color: inherit;
-    border: 0;
-    cursor: pointer;
-}
-
-.main-header .btn-toggle-menu .hamburger-lines {
-    height: 26px;
-    width: 32px;
-
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-}
-
-.main-header .btn-toggle-menu .hamburger-lines .line {
-    height: 4px;
-    width: 100%;
-    background-color: var(--colorNavBarButton);
-    transition: 0.4s;
-}
-
-body.menu-open .btn-toggle-menu .hamburger-lines .line.line1 {
-    rotate: -45deg;
-    transform-origin: top right;
-}
-
-body.menu-open .btn-toggle-menu .hamburger-lines .line.line2 {
-    scale: 0;
-}
-
-body.menu-open .btn-toggle-menu .hamburger-lines .line.line3 {
-    rotate: 45deg;
-    transform-origin: bottom right;
-}

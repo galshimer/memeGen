@@ -5,6 +5,7 @@
 body {
     text-align: center;
     margin: 0;
+    padding-bottom: 55px;
 }
 
 canvas {
@@ -33,10 +34,14 @@ canvas {
 .editor{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+    height: 500px;
 }
 
 .fa-square-facebook{
     font-size: 30px;
-    color:var(--colorBrown) ;
+    color:var(--colorBrown);
+}
+
+.about img{
+    width: 70%;
 }

@@ -1,8 +1,8 @@
 :root{
     --colorDefaultText: #ffffff;
     --colorDefaultStroke: #000000;
-    --colorBase:RGBA(255, 127, 0, 1);
+    --colorBase:rgba(255, 127, 0, 1);
     --colorNavBarButton: #040A2C;
-    --colorOrange:RGBA(255, 127, 0, 1);
-    --colorBrown:RGB(98, 0, 0); 
+    --colorOrange:rgba(255, 127, 0, 1);
+    --colorBrown:rgb(98, 0, 0); 
 }

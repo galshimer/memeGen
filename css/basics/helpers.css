@@ -14,13 +14,10 @@
     align-items: center;
 }
 
-/* .clean-list{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-} */
-
 div.none{
     display: none;
 }
 
+div.block{
+    display: block;
+}

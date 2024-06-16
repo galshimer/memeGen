@@ -29,10 +29,6 @@ function doUploadImg(imgDataUrl, onSuccess) {
     XHR.send(formData)
 }
 
-function toggleMenu() {
-    document.body.classList.toggle("menu-open")
-}
-
 function getRandomInt(min, max) {
     const minCeiled = Math.ceil(min);
     const maxFloored = Math.floor(max);
@@ -41,7 +37,9 @@ function getRandomInt(min, max) {
 
 function getColor() {
     return document.getElementById('color').value
-} function onImgInput(ev) {
+} 
+
+function onImgInput(ev) {
     loadImageFromInput(ev, renderImg)
 }
 
