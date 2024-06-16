@@ -1,0 +1,26 @@
+/* ONLY MOBILE */
+@media (max-width: 540px) {
+    .main-header {
+        min-height: 70px;
+    }
+
+    /* .hamburger {
+        display: block;
+    } */
+
+    .gallery-container{
+        display: grid;
+        /* grid-template-rows: auto; */
+        grid-template-columns: repeat(auto-fill, 180px);
+        gap: 5px;
+        
+    }
+}
+
+
+/* MEDIUM */
+@media (min-width: 860px) {
+    .btn-toggle-menu {
+        display: none;
+    }
+}

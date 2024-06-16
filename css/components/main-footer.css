@@ -1,0 +1,5 @@
+.main-footer{
+    text-align: center;
+    background-color: var(--colorBase);
+    color: var(--colorDefaultText);
+}

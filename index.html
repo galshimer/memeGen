@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/287346be32.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Meme Generator</title>
+</head>
+
+<body class="main-layout" onload="onInit()">
+    <header class="main-header">
+        <div class="nav-bar">
+            <div class="logo"><img src="logo.png"></div>
+            <div class="main-nav">
+                <nav class="main-nav-container">
+                    <div class="main-nav flex">
+                        <button class="btn-nav" onclick="onChangeView('gallery')">Gallery</button>
+                        <button class="btn-nav" onclick="onChangeView('about')">About</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- <button class="btn-toggle-menu" onclick="toggleMenu()">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+        </button> -->
+        <div class="filterForm">
+            <form id="filterForm">
+                <label for="subjects">search:</label>
+                <input list="subjects" name="subjects" placeholder="Enter search keyword 🔍">
+                <datalist id="subjects">
+                    <option value="funny">
+                    <option value="president">
+                    <option value="baby">
+                    <option value="cat">
+                    <option value="dog">
+                </datalist>
+                <input type="submit" style="display:none;">
+            </form>
+        </div>
+    </header>
+    <div>
+        <div class="editor none">
+            <div>
+                <canvas width="450" height="450" onclick="onCanvasClick(event)"></canvas>
+            </div>
+            <div>
+                <div class="btns">
+                    <div>
+                        <input class="input-text" type="text" oninput="onEditText(value)" id="memeText"
+                            placeholder="Enter text for meme">
+                    </div>
+                    <div class="line flex space-evenly">
+                        <input type="color" id="color" name="color" value="#ffffff" />
+                        <button class="btn" onclick="OnAddText()">Add text</button>
+                        <button class="btn" onclick="onSwitchLine()"> Switch line</button>
+                    </div>
+                    <div class="line flex space-evenly"> <button class="btn" onclick="onChangeFontSize(1)"><i
+                                class="fa-solid fa-font"></i>+</button>
+                        <button class="btn" onclick="onChangeFontSize(-1)"><i class="fa-solid fa-font"></i>-</button>
+                        <select onchange="onChangeFontFamily(this.value)">
+                            <option value="Impact">Impact</option>
+                            <option value="Arial">Arial</option>
+                        </select>
+                    </div>
+                    <div class="line flex space-evenly">
+                        <button class="btn" onclick="onChangeTextAlign('right')"><i
+                                class="fa-solid fa-align-left"></i></button>
+                        <button class="btn" onclick="onChangeTextAlign('center')"><i
+                                class="fa-solid fa-align-center"></i></button>
+                        <button class="btn" onclick="onChangeTextAlign('left')"><i
+                                class="fa-solid fa-align-right"></i></button>
+                    </div>
+                    <div class="line flex space-evenly">
+                        <button class="btn" onclick="moveLine(1)"><i class="fa-solid fa-arrow-up"></i></button>
+                        <button class="btn" onclick="moveLine(-1)"><i class="fa-solid fa-arrow-down"></i></button>
+                        <button class="btn" onclick="onDeleteLine()"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div class="line flex space-evenly">
+                        <a href="#" class="btn" onclick="onDownloadImg(this)" download="my-img.jpg">Download your
+                            photo</a>
+                        <button class="facebook" onclick="onUploadImg()">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </button>
+                    </div>
+                    <!-- <div class="upload-img line">
+                        <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" accept="image/*" />
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="gallery-container">
+        </div>
+        <div class="none about"> About</div>
+    </div>
+    <footer class="main-footer">
+        <div class="logo">
+            Gal's meme generator
+        </div>
+        <p> Gal's copyright</p>
+    </footer>
+
+
+    <script src="js/memeService.js"></script>
+    <script src="js/controllers/memeController.js"></script>
+    <script src="js/controllers/galleryController.js"></script>
+    <script src="js/util.js"></script>
+</body>
+
+</html>

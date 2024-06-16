@@ -1,0 +1,19 @@
+.main-nav-container {
+    display: flex;
+    transition: 1s;
+}
+
+.btn-nav {
+    display: grid;
+    padding: 10px;
+    height: 55px;
+    align-items: center;
+    color: var(--colorDefaultText);
+    background-color: var(--colorOrange);
+    border: 0px;
+}
+
+.btn-nav:hover {
+    box-shadow: inset 0px -5px 0px 0px var(--colorNavBarButton);
+    color: var(--colorNavBarButton);
+}

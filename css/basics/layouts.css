@@ -1,0 +1,7 @@
+.main-layout{
+    display: grid;
+grid-template-rows: 
+minmax(100px,1fr)
+minmax(800px)
+minmax(100px,1fr);
+}
