@@ -75,6 +75,9 @@ function onImgSelect(elImg) {
     var elEditor = document.querySelector('.editor')
     console.log('elEditor: ', elEditor)
     elEditor.classList.remove('none')
+    var elGallery = document.querySelector('.gallery-container')
+    console.log('elGallery: ', elGallery)
+    elGallery.classList.add('none')
     renderMeme()
 }
 
@@ -162,7 +165,6 @@ function onChangeView(section) {
     }
 }
 
-
 function onMouseDown(ev) {
     const { offsetX, offsetY } = ev
     const lineIdx = gMeme.lines.findIndex(line => {
@@ -198,4 +200,3 @@ function onMouseMove(ev) {
 function onMouseUp() {
     gIsDragging = false
 }
-

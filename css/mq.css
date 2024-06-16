@@ -8,19 +8,18 @@
         display: block;
     } */
 
-    .gallery-container{
-        display: grid;
-        /* grid-template-rows: auto; */
-        grid-template-columns: repeat(auto-fill, 180px);
-        gap: 5px;
-        
+    .gallery-container img {
+        width: 180px;
     }
+
 }
 
+@media (max-width: 680px) {
 
-/* MEDIUM */
-@media (min-width: 860px) {
-    .btn-toggle-menu {
-        display: none;
+}
+
+@media (max-width: 750px) {
+    .btn{
+        font-size:10px;
     }
 }
